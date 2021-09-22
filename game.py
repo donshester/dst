@@ -19,9 +19,10 @@ def random_predict(number: int = 1) -> int:
     k=101
     while True:
         count += 1
-        predict_number = (k+n)//2  # предполагаемое число
+        predict_number = (k+n)//2  # предполагаемое число. с каждым шагом количество возможных оставших чисел уменьшается в два раза.
+     
         if number == predict_number:
-            break  # выход из цикла если угадали
+            break  # выход из цикла, если угадали
         elif number > predict_number:
             n = predict_number
         elif number < predict_number:
